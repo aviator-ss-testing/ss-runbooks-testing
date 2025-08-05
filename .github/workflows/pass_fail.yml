@@ -1,0 +1,18 @@
+name: Pass or fail
+
+on: [pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  always_fail:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Always fail
+      run: |
+        echo success
+        exit 0
