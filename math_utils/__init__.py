@@ -13,7 +13,6 @@ All public functions are available for direct import:
     from math_utils.statistics import standard_deviation
 """
 
-# Import all public functions from submodules
 from .arithmetic import (
     factorial,
     gcd,
