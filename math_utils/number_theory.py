@@ -13,24 +13,17 @@ from typing import List, Iterator
 def is_prime(n: int) -> bool:
     """
     Check if a number is prime.
-
     Args:
         n: Integer to check for primality
-
     Returns:
         True if n is prime, False otherwise
-
     Raises:
         TypeError: If n is not an integer
         ValueError: If n is less than 2
-
     Examples:
-        >>> is_prime(17)
-        True
-        >>> is_prime(15)
-        False
-        >>> is_prime(2)
-        True
+        >>> is_prime(17)  # True
+        >>> is_prime(15)  # False
+        >>> is_prime(2)   # True
     """
     if not isinstance(n, int):
         raise TypeError("Input must be an integer")
@@ -53,22 +46,16 @@ def is_prime(n: int) -> bool:
 def generate_primes(limit: int) -> List[int]:
     """
     Generate all prime numbers up to a given limit using the Sieve of Eratosthenes.
-
     Args:
         limit: Upper bound for prime generation (inclusive)
-
     Returns:
         List of prime numbers up to limit
-
     Raises:
         TypeError: If limit is not an integer
         ValueError: If limit is less than 2
-
     Examples:
-        >>> generate_primes(10)
-        [2, 3, 5, 7]
-        >>> generate_primes(2)
-        [2]
+        >>> generate_primes(10)  # [2, 3, 5, 7]
+        >>> generate_primes(2)   # [2]
     """
     if not isinstance(limit, int):
         raise TypeError("Limit must be an integer")
@@ -90,24 +77,17 @@ def generate_primes(limit: int) -> List[int]:
 def prime_factors(n: int) -> List[int]:
     """
     Find all prime factors of a positive integer.
-
     Args:
         n: Positive integer to factorize
-
     Returns:
         List of prime factors (with repetition for powers)
-
     Raises:
         TypeError: If n is not an integer
         ValueError: If n is less than 1
-
     Examples:
-        >>> prime_factors(12)
-        [2, 2, 3]
-        >>> prime_factors(17)
-        [17]
-        >>> prime_factors(1)
-        []
+        >>> prime_factors(12)  # [2, 2, 3]
+        >>> prime_factors(17)  # [17]
+        >>> prime_factors(1)   # []
     """
     if not isinstance(n, int):
         raise TypeError("Input must be an integer")
@@ -135,24 +115,17 @@ def prime_factors(n: int) -> List[int]:
 def fibonacci_sequence(n: int) -> List[int]:
     """
     Generate the first n numbers in the Fibonacci sequence.
-
     Args:
         n: Number of Fibonacci numbers to generate
-
     Returns:
         List containing the first n Fibonacci numbers
-
     Raises:
         TypeError: If n is not an integer
         ValueError: If n is negative
-
     Examples:
-        >>> fibonacci_sequence(5)
-        [0, 1, 1, 2, 3]
-        >>> fibonacci_sequence(1)
-        [0]
-        >>> fibonacci_sequence(0)
-        []
+        >>> fibonacci_sequence(5)  # [0, 1, 1, 2, 3]
+        >>> fibonacci_sequence(1)  # [0]
+        >>> fibonacci_sequence(0)  # []
     """
     if not isinstance(n, int):
         raise TypeError("Input must be an integer")
@@ -174,22 +147,16 @@ def fibonacci_sequence(n: int) -> List[int]:
 def fibonacci_generator(limit: int) -> Iterator[int]:
     """
     Generate Fibonacci numbers up to a given limit.
-
     Args:
         limit: Upper bound for Fibonacci generation
-
     Yields:
         Fibonacci numbers up to the limit
-
     Raises:
         TypeError: If limit is not an integer
         ValueError: If limit is negative
-
     Examples:
-        >>> list(fibonacci_generator(10))
-        [0, 1, 1, 2, 3, 5, 8]
-        >>> list(fibonacci_generator(1))
-        [0, 1, 1]
+        >>> list(fibonacci_generator(10))  # [0, 1, 1, 2, 3, 5, 8]
+        >>> list(fibonacci_generator(1))   # [0, 1, 1]
     """
     if not isinstance(limit, int):
         raise TypeError("Limit must be an integer")
@@ -205,24 +172,17 @@ def fibonacci_generator(limit: int) -> Iterator[int]:
 def is_fibonacci(n: int) -> bool:
     """
     Check if a number is a Fibonacci number.
-
     Args:
         n: Integer to check
-
     Returns:
         True if n is a Fibonacci number, False otherwise
-
     Raises:
         TypeError: If n is not an integer
         ValueError: If n is negative
-
     Examples:
-        >>> is_fibonacci(8)
-        True
-        >>> is_fibonacci(9)
-        False
-        >>> is_fibonacci(0)
-        True
+        >>> is_fibonacci(8)  # True
+        >>> is_fibonacci(9)  # False
+        >>> is_fibonacci(0)  # True
     """
     if not isinstance(n, int):
         raise TypeError("Input must be an integer")
@@ -243,26 +203,18 @@ def is_fibonacci(n: int) -> bool:
 def is_perfect_number(n: int) -> bool:
     """
     Check if a number is a perfect number.
-
     A perfect number is equal to the sum of its proper positive divisors.
-
     Args:
         n: Positive integer to check
-
     Returns:
         True if n is a perfect number, False otherwise
-
     Raises:
         TypeError: If n is not an integer
         ValueError: If n is less than 1
-
     Examples:
-        >>> is_perfect_number(6)
-        True
-        >>> is_perfect_number(28)
-        True
-        >>> is_perfect_number(12)
-        False
+        >>> is_perfect_number(6)   # True
+        >>> is_perfect_number(28)  # True
+        >>> is_perfect_number(12)  # False
     """
     if not isinstance(n, int):
         raise TypeError("Input must be an integer")
@@ -285,26 +237,18 @@ def is_perfect_number(n: int) -> bool:
 def is_abundant_number(n: int) -> bool:
     """
     Check if a number is an abundant number.
-
     An abundant number is less than the sum of its proper positive divisors.
-
     Args:
         n: Positive integer to check
-
     Returns:
         True if n is an abundant number, False otherwise
-
     Raises:
         TypeError: If n is not an integer
         ValueError: If n is less than 1
-
     Examples:
-        >>> is_abundant_number(12)
-        True
-        >>> is_abundant_number(6)
-        False
-        >>> is_abundant_number(18)
-        True
+        >>> is_abundant_number(12)  # True
+        >>> is_abundant_number(6)   # False
+        >>> is_abundant_number(18)  # True
     """
     if not isinstance(n, int):
         raise TypeError("Input must be an integer")
@@ -327,22 +271,16 @@ def is_abundant_number(n: int) -> bool:
 def gcd_multiple(*numbers: int) -> int:
     """
     Calculate the Greatest Common Divisor of multiple integers.
-
     Args:
         *numbers: Variable number of integers
-
     Returns:
         The greatest common divisor of all input numbers
-
     Raises:
         TypeError: If any input is not an integer
         ValueError: If no numbers are provided
-
     Examples:
-        >>> gcd_multiple(48, 18, 24)
-        6
-        >>> gcd_multiple(7, 13, 21)
-        1
+        >>> gcd_multiple(48, 18, 24)  # 6
+        >>> gcd_multiple(7, 13, 21)   # 1
     """
     if not numbers:
         raise ValueError("At least one number must be provided")
@@ -363,22 +301,16 @@ def gcd_multiple(*numbers: int) -> int:
 def lcm_multiple(*numbers: int) -> int:
     """
     Calculate the Least Common Multiple of multiple integers.
-
     Args:
         *numbers: Variable number of non-zero integers
-
     Returns:
         The least common multiple of all input numbers
-
     Raises:
         TypeError: If any input is not an integer
         ValueError: If no numbers are provided or any number is zero
-
     Examples:
-        >>> lcm_multiple(4, 6, 8)
-        24
-        >>> lcm_multiple(3, 5, 7)
-        105
+        >>> lcm_multiple(4, 6, 8)  # 24
+        >>> lcm_multiple(3, 5, 7)  # 105
     """
     if not numbers:
         raise ValueError("At least one number must be provided")
@@ -399,24 +331,17 @@ def lcm_multiple(*numbers: int) -> int:
 def extended_gcd(a: int, b: int) -> tuple[int, int, int]:
     """
     Calculate the extended Greatest Common Divisor using the Extended Euclidean Algorithm.
-
     Returns gcd(a, b) and coefficients x, y such that ax + by = gcd(a, b).
-
     Args:
         a: First integer
         b: Second integer
-
     Returns:
         Tuple (gcd, x, y) where gcd is the GCD and x, y are the coefficients
-
     Raises:
         TypeError: If inputs are not integers
-
     Examples:
-        >>> extended_gcd(30, 18)
-        (6, 1, -1)
-        >>> extended_gcd(35, 15)
-        (5, 1, -2)
+        >>> extended_gcd(30, 18)  # (6, 1, -1)
+        >>> extended_gcd(35, 15)  # (5, 1, -2)
     """
     if not isinstance(a, int) or not isinstance(b, int):
         raise TypeError("Both inputs must be integers")
