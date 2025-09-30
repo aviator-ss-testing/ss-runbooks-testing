@@ -1,4 +1,4 @@
-def bad_formatting(x, y):
+def bad_formatting(x: int, y: int) -> int:
     return x + y
 
 
